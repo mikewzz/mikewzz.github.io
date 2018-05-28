@@ -41,7 +41,7 @@ li a:hover {
 }
 .icon-bar{
   text-align: center;
-  font-size: 40px; 
+  font-size: 40px;
 }
 .about-page{
   margin: 80px 150px 20px 150px;
@@ -62,9 +62,6 @@ li a:hover {
   margin: 10px;
 }
 .port{
-  max-height: 200px;
-  max-width: 360px;
-  width: auto;
   display: block;
 }
 h3{
