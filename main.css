@@ -58,6 +58,10 @@ li a:hover {
   display: block;
   margin: 0 auto;
 }
+.profile-pic{
+  display:  blocks;
+  margin: 0 auto;
+}
 .portfolio-page img{
   margin: 10px;
 }
