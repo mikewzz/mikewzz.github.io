@@ -57,6 +57,7 @@ li a:hover {
   width: auto;
   display: block;
   margin: 0 auto;
+  float: none;
 }
 .profile-pic{
   display:  blocks;
