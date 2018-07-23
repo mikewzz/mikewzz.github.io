@@ -1,0 +1,86 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.logo{
+  display: block;
+  max-width:230px;
+  max-height:65px;
+  width: auto;
+  height: auto;
+}
+.nav-img {
+  float: left;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  font-size: 20px;
+  padding: 16px;
+  text-decoration: none;
+
+}
+li a:hover {
+  background-color: grey;
+  color: white;
+}
+.info{
+  font-size: 16px;
+  font-family: "Arial Black", Gadget, sans-serif;
+  border-bottom: 2px dotted;
+}
+.icon-bar{
+  text-align: center;
+  font-size: 40px;
+}
+.about-page{
+  margin: 80px 150px 20px 150px;
+  padding: 20px;
+  background-color: #F0FFFF;
+}
+.about-page p{
+  padding: 20px;
+  text-align: center;
+}
+.about-page img{
+  max-height: 300px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  float: none;
+}
+.profile-pic{
+  display:  blocks;
+  margin: 0 auto;
+}
+.portfolio-page img{
+  margin: 10px;
+  width: 90%;
+}
+.port{
+  display: block;
+}
+h3{
+  text-align:center;
+  text-decoration: underline;
+  font-weight: bold;
+}
+label, input{
+  display: block;
+}
+label{
+  margin-bottom: 20px;
+}
+textarea{
+  resize: none;
+}
