@@ -4,9 +4,13 @@
 <head>
   <meta charset="uth-utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="styles/style.css">
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl" crossorigin="anonymous"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy" crossorigin="anonymous"></script>
+  <link href="http://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Alegreya:700" rel="stylesheet" type="text/css" />
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+  <!-- <link href='//cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'> -->
+
   <title>
     "Michael Wang - Developer"
   </title>
@@ -14,67 +18,222 @@
 <body>
   <header>
     <!-- navbar -->
-    <nav class="navbar">
-      <ul>
-        <li><a href="#About">About</a></li>
-        <li><a href="#Portfolio">My Projects</a></li>
-        <li><a href="#Contact">Contact</a></li>
-        <li><a href="#Blog">Blog</a></li>
-      </ul>
+    <nav class="navbar navbar-dark navbar-expand-sm bg-dark">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+            <img src="images/37666006_10211217954959242_7132932520982609920_n.png" alt="">Michael Wang
+          </a>
+        </div>
+        <ul class="nav navbar-right">
+            <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#projects" class="nav-link">My Projects</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="#blog" class="nav-link">Blog</a></li>
+        </ul>
+      </div>
     </nav>
     <!-- navbar ends-->
-    <div class="container">
-    <!-- About page -->
-    <div class="about-page row">
-      <div class="col-xs-6">
-        <div class="row">
-          <p class="info col-xs-12"> Aspiring software developer with experience in web app development and business branding strategies. Firm believer in writing code that is not only functional but readable. Afterall programming languages are also languages, just spoken by machines.</p>
-          <hr>
-          <div class="icon-bar col-xs-12">
-            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-          </div>
+    <section class="headerContent">
+      <div class="wrapper clearfix">
+        <div class="headerContentLeft">
+          <h1>Hello world, my name is <span class="primaryColor">Michael</span>.</h1>
+          <h2>I'm a software & web developer.</h2>
+          <p> I love what I do and I want to work with cool people. If you are cool, check me out and say hello!</p>
+          <button>Click Only If Cool</button>
+        </div>
+        <div class="headerContentRight clearfix">
+          <img src="images/PersonalPhotoCropped2.png" alt=""> 
         </div>
       </div>
-    </div>
-    <!-- About page ends-->
-  </header>
-    <hr>
-  <main>
-    <!--Portfolio Page-->
-    <section class="myProjects">
-      
     </section>
-    <!--Portfolio Page ends-->
-    <hr>
+  </header>
+    <!-- About Section -->
+      <section id="about" class="about wrapper clearfix">
+        <div class="aboutText">
+          <h2 class="sectionHeading">About</h2>
+          <img src="images/myAvatar2.png" alt="" class="myAvatar">
+          <p>I am a software developer based in Toronto, Canada. I believe in being functional and readable both in my work and in life. I love to learn and I'm constantly looking for new projects and challenges to improve my skill set. In my spare time I like to watch/play sports like basketball, baseball, and football. And occasionally you can find me on the golf course trying my best to shoot < 100.</p>
+        </div>
+        <div class="aboutSkills">
+          <p class="skillText">Here are some of my skills...</p>
+          <div class="skills">
+            <div class="devCards">
+              <div class="front">
+                <i class="devicon-java-plain"></i>
+              </div>
+              <div class="back">
+                <p>Java</p>
+              </div>
+            </div>
+            <div class="devCards">
+              <div class="front">
+                <i class="devicon-javascript-plain"></i>
+              </div>
+              <div class="back">
+                <p>JavaScript</p>
+              </div>
+            </div>
+            <div class="devCards">
+              <div class="front">
+                <i class="devicon-angularjs-plain"></i>
+              </div>
+              <div class="back">
+                <p>Angular 6</p>
+              </div>
+            </div>
+            <div class="devCards">
+              <div class="front">
+                <i class="devicon-typescript-plain"></i>
+              </div>
+              <div class="back">
+                <p>TypeScript</p>
+              </div>
+            </div>
+            <div class="devCards">
+              <div class="front">
+                <i class="devicon-html5-plain"></i>
+              </div>
+              <div class="back">
+                <p>HTML5</p>
+              </div>
+            </div>
+            <div class="devCards">
+              <div class="front">
+                <i class="devicon-css3-plain"></i>
+              </div>
+              <div class="back">
+                <p>CSS3</p>
+              </div>
+            </div>
+            <div class="devCards">
+              <div class="front">
+                <i class="devicon-sass-original"></i>
+              </div>
+              <div class="back">
+                <p>Sass</p>
+              </div>
+            </div>
+            <div class="devCards">
+              <div class="front">
+                <i class="devicon-bootstrap-plain"></i>
+              </div>
+              <div class="back">
+                <p>Bootstrap</p>
+              </div>
+            </div>
+            <div class="devCards">
+              <div class="front">
+                <i class="devicon-php-plain"></i>
+              </div>
+              <div class="back">
+                <p>PHP</p>
+              </div>
+            </div>
+            <div class="devCards">
+              <div class="front">
+                <i class="devicon-github-plain"></i>
+              </div>
+              <div class="back">
+                <p>Github</p>
+              </div>
+            </div>
+          </div>
+          <p class="skillText">Skills that I want to learn...</p>
+          <div class="wantedSkills">
+            <div class="devCards">
+              <div class="front">
+                <i class="devicon-cucumber-plain"></i>
+              </div>
+              <div class="back">
+                <p>Cucumber</p>
+              </div>
+            </div>
+            <div class="devCards">
+              <div class="front">
+                <i class="devicon-react-original"></i>
+              </div>
+              <div class="back">
+                <p>React</p>
+              </div>
+            </div>
+            <div class="devCards">
+              <div class="front">
+                <i class="devicon-ruby-plain"></i>
+              </div>
+              <div class="back">
+                <p>Ruby</p>
+              </div>
+            </div>
+            <div class="devCards">
+              <div class="front">
+                <i class="devicon-amazonwebservices-original"></i>
+              </div>
+              <div class="back">
+                <p>AWS</p>
+              </div>
+            </div>
+            <div class="devCards">
+              <div class="front">
+                <i class="devicon-android-plain"></i>
+              </div>
+              <div class="back">
+                <p>Android</p>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </section>
+    <!-- About Section ends-->
+  <main>
+    <!--Project Section-->
+    <section id="projects" class="myProjects">
+      <h2 class="sectionHeading">My Projects</h2>
+      <div class="clearfix">
+        <div class="proj proj1">
+          <img src="images/website1.png" alt="">
+        </div>
+        <div class="proj proj2">
+          <img src="images/website2.png" alt="">
+        </div>
+        <div class="proj proj3">
+          <img src="images/website3.png" alt="">
+        </div>
+      </div>
+    </section>
+    <!--Project Section ends-->
+    <section id="blog" class="myBlog">
+      <h2 class="sectionHeading">My Blog</h2>
+      <h3>Behind the scenes of my life!</h3>
+      <p>Coming Soon!.....</p>
+    </section>
     <!--Contact Section-->
-    <section class="contactMe">
-      <form>
-      <h3>Contact Me </h3>
-        <label>
-          Name: <input type="text" name="name">
-        </label>
-        <label>
-          Email: <input type="email" name="email">
-        </label>
-        <label>
-          Questions/Comments: <br><textarea rows="3" cols="100" name="comments" placeholder="Please ask me questions!"> </textarea>
-        </label>
-        <label>
-          <input type="submit" value="Submit">
-        </label>
+    <section id="contact" class="contactMe wrapper">
+      <form method="POST" autocomplete="off">
+        <h2>Contact Me </h2>
+        <div class="inputWithIcon">
+          <input type="text" placeholder="Name*" required>
+          <!-- <i class="fas fa-user"></i> -->
+        </div>
+        <div class="inputWithIcon">
+          <input type="text" placeholder="E-mail*" required>
+          <!-- <i class="fas fa-envelope"></i> -->
+        </div>
+        <textarea name="message" placeholder="Message" rows="4" class="inputWithIcon"></textarea>
+        <button type="submit" value="Submit">Submit</button>
       </form>
+      <form>
     </section>
     <!--Contact Section Ends-->
   </main>
     <hr>
   <footer>
-    <div class="icon-bar col-xs-12">
+    <div class="">
       <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
       <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
       <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
     </div>
+    <p>&#169 Michael Wang 2018</p>
   </footer>
 </body>
 </html>
