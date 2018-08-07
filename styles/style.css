@@ -28,7 +28,7 @@ h1 {
 h2{
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: 700;
-  font-size: 2.1rem;
+  font-size: 2.4rem;
   line-height: 23px;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -86,13 +86,13 @@ button:hover:before,button:hover:after{
 /*header/nav styles*/
 header {
   min-height: 100vh;
-  background: #EBEBEB;
+  background: #FBFBFB;
 }
 .navbar {
   font-family: 'Roboto Condensed', sans-serif;
   letter-spacing: 3px;
   text-transform: uppercase;
-  background: #bababa;
+  background: #AFDFF2;
 }
 .navbar-header img{
   width: 15%;
@@ -153,12 +153,13 @@ header {
 
 /*Skills styles*/
 .aboutText{
-  width: calc(50% - 10px); 
+  width: calc(60% - 20px); 
   float: left; 
-  margin-right: 10px; 
+  margin-right: 20px;
+  padding: 0 20px; 
 }
 .aboutSkills{
-  width: calc(50% - 10px);
+  width: calc(40% - 10px);
   float: left; 
   margin-left: 10px; 
 } 
@@ -171,7 +172,6 @@ header {
 .skills, .wantedSkills {
   display: flex; 
   flex-flow: wrap row;
-  justify-content: space-around;
 }
 .front i{
   font-size: 8rem;
@@ -187,7 +187,7 @@ header {
   width: 10rem;
   height: 10rem;
   perspective: 30rem;
-  margin: 5px 0; 
+  margin: 5px; 
 }
 .front, .back {
   position: absolute;
@@ -213,14 +213,13 @@ header {
 
 /*Project styles*/
 .myProjects{
-  background: #bababa;
+  background: #F0A202;
   padding: 50px 0; 
 }
 .proj {
   width: calc(33.333333333333333333% - 20px);
   height: 40%;  
   float: left; 
-  /*position: relative;*/
   margin:0 10px; 
 }
 .innerPic {
@@ -234,8 +233,6 @@ header {
 .monitorBase {
   width: 100%;
   min-width: 215px; 
-  /*position: absolute;*/
-  /*top: 0;  */
 }
 /*522px x 406px is the size of the screen in the computer*/
 .proj img {
@@ -288,6 +285,22 @@ header {
 .contactMe {
   padding: 50px 0;
 }
+.contactPhoto img {
+  width: 40%; 
+  border-radius: 50%; 
+  float: right; 
+}
+.contactPhoto, .contactInfo {
+  float: left; 
+  width: calc(50% - 20px); 
+}
+.contactInfo {
+  margin-left: 40px; 
+  font-size: 5rem;
+  display: flex; 
+  flex-direction: column; 
+}
+
 /*form styles*/
 form {
   display: flex; 
