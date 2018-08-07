@@ -15,8 +15,7 @@ body {
 
 }
 .wrapper {
-  width: 1200px;
-  max-width: 1280px;
+  width: 80%; 
   margin: 0 auto; 
 }
 h1 {
@@ -86,8 +85,14 @@ button:hover:before,button:hover:after{
 /*global styles end*/
 /*header/nav styles*/
 header {
-  height: 100vh;
+  min-height: 100vh;
   background: #EBEBEB;
+}
+.navbar {
+  font-family: 'Roboto Condensed', sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background: #bababa;
 }
 .navbar-header img{
   width: 15%;
@@ -98,7 +103,7 @@ header {
 }
 .nav-item a{
   margin: 0 20px;  
-  color: white; 
+  color: black; 
 }
 .nav-link{
   /*-webkit-transform: translateZ(0);*/
@@ -136,7 +141,7 @@ header {
   text-align: center; 
 }
 .headerContentRight img{
-  height: calc(100vh - 76.75px);
+  height: calc(100vh - 80px);
   float: right;  
 }
 .myAvatar {
@@ -166,7 +171,7 @@ header {
 .skills, .wantedSkills {
   display: flex; 
   flex-flow: wrap row;
-  justify-content: space-between; 
+  justify-content: space-around;
 }
 .front i{
   font-size: 8rem;
@@ -208,33 +213,45 @@ header {
 
 /*Project styles*/
 .myProjects{
-  background: #6BCEE1;
+  background: #bababa;
   padding: 50px 0; 
 }
 .proj {
   width: calc(33.333333333333333333% - 20px);
-  height: 400px;  
+  height: 40%;  
   float: left; 
-  background-image: url(../images/computerScreen.png);
-  position: relative;
-  background-size: contain; 
-  background-position: center; 
-  background-repeat: no-repeat;
+  /*position: relative;*/
   margin:0 10px; 
 }
-
+.innerPic {
+  width: 100%;
+  min-width: 215px; 
+  margin: 0 auto; 
+  position: relative;
+  border: 10px solid black; 
+  border-radius: 5px; 
+}
+.monitorBase {
+  width: 100%;
+  min-width: 215px; 
+  /*position: absolute;*/
+  /*top: 0;  */
+}
+/*522px x 406px is the size of the screen in the computer*/
 .proj img {
-  width:69.9%;
-  position: absolute;
+  /*width:69.9%;*/
+/*  position: absolute;
   top:8.8%;
   left:15%;
   right: 15%;
-/*  top: 0;
+  top: 0;
   bottom: 0; 
   left: 0; 
   right: 0; 
 */
-}/*
+}
+
+/*
 .proj1 {
   background: lightblue;
 }
@@ -245,7 +262,53 @@ header {
 .proj3 {
   background: dodgerblue; 
 }*/
+/*proj hover styles*/
+.projPic {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
 
+.projInfo {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*-ms-transform: translate(-50%, -50%);*/
+  text-align: center;
+}
+
+.innerPic:hover .projPic {
+  opacity: 0.3;
+}
+
+.innerPic:hover .projInfo {
+  opacity: 1;
+}
+
+.projInfo p {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+/*proj hover stles end*/
+/*blog styles*/
+.myBlog{
+  height: 300px; 
+  background: #EBEBEB; 
+  padding: 50px 0; 
+}
+/*blog styles ends*/
+/*contact section styles*/
+.contactMe {
+  padding: 50px 0;
+}
 /*form styles*/
 form {
   display: flex; 
@@ -271,12 +334,9 @@ input, textarea {
   background-color:#f8f8f8;
 }
 
-form button {
-  background: white; 
-  color: #23292c;
-  border: 1px solid #23292c; 
-}
+
 /*form styles end*/
+/*contact styles end*/
 /*footer styles*/
 footer {
   margin: 0 auto;  

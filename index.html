@@ -18,16 +18,16 @@
 <body>
   <header>
     <!-- navbar -->
-    <nav class="navbar navbar-dark navbar-expand-sm bg-dark">
+    <nav class="navbar navbar-light navbar-expand-sm">
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="#">
-            <img src="images/37666006_10211217954959242_7132932520982609920_n.png" alt="">Michael Wang
+            <img src="./images/37666006_10211217954959242_7132932520982609920_n.png" alt="">Michael Wang
           </a>
         </div>
         <ul class="nav navbar-right">
             <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-            <li class="nav-item"><a href="#projects" class="nav-link">My Projects</a></li>
+            <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
             <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
             <li class="nav-item"><a href="#blog" class="nav-link">Blog</a></li>
         </ul>
@@ -43,7 +43,7 @@
           <button>Click Only If Cool</button>
         </div>
         <div class="headerContentRight clearfix">
-          <img src="images/PersonalPhotoCropped2.png" alt=""> 
+          <img src="./images/HeaderPhotoNY.png" alt=""> 
         </div>
       </div>
     </section>
@@ -52,7 +52,7 @@
       <section id="about" class="about wrapper clearfix">
         <div class="aboutText">
           <h2 class="sectionHeading">About</h2>
-          <img src="images/myAvatar2.png" alt="" class="myAvatar">
+          <img src="./images/myAvatar2.png" alt="" class="myAvatar">
           <p>I am a software developer based in Toronto, Canada. I believe in being functional and readable both in my work and in life. I love to learn and I'm constantly looking for new projects and challenges to improve my skill set. In my spare time I like to watch/play sports like basketball, baseball, and football. And occasionally you can find me on the golf course trying my best to shoot < 100.</p>
         </div>
         <div class="aboutSkills">
@@ -188,24 +188,48 @@
   <main>
     <!--Project Section-->
     <section id="projects" class="myProjects">
-      <h2 class="sectionHeading">My Projects</h2>
+      <h2 class="sectionHeading">Projects</h2>
       <div class="clearfix">
+
         <div class="proj proj1">
-          <img src="images/website1.png" alt="">
+          <div class="innerPic">
+            <img src="./images/website1.png" class="img-fluid projPic" alt="">
+            <div class="projInfo">
+              <p>SITE INFO FILLER</p>
+            </div>
+          </div>
+          <!-- set a breakpoint for the monitor base so we don't see it separating from the 'monitor' -->
+          <img src="./images/compScreen2.png" class="monitorBase"alt="">
         </div>
         <div class="proj proj2">
-          <img src="images/website2.png" alt="">
+          <div class="innerPic">
+            <img src="./images/website2.png" class="img-fluid projPic" alt="">
+            <div class="projInfo">
+              <p>SITE INFO FILLER</p>
+            </div>
+          </div>
+          <!-- set a breakpoint for the monitor base so we don't see it separating from the 'monitor' -->
+          <img src="./images/compScreen2.png" class="monitorBase"alt="">
         </div>
         <div class="proj proj3">
-          <img src="images/website3.png" alt="">
+          <div class="innerPic">
+            <img src="./images/website3.png" class="img-fluid projPic" alt="">
+            <div class="projInfo">
+              <p>SITE INFO FILLER</p>
+            </div>
+          </div>
+          <!-- set a breakpoint for the monitor base so we don't see it separating from the 'monitor' -->
+          <img src="./images/compScreen2.png" class="monitorBase"alt="">
         </div>
       </div>
     </section>
     <!--Project Section ends-->
     <section id="blog" class="myBlog">
-      <h2 class="sectionHeading">My Blog</h2>
-      <h3>Behind the scenes of my life!</h3>
-      <p>Coming Soon!.....</p>
+      <div class="wrapper">
+        <h2 class="sectionHeading">My Blog</h2>
+        <h3>Behind the scenes of my life!</h3>
+        <p>Coming Soon!.....</p>
+      </div>
     </section>
     <!--Contact Section-->
     <section id="contact" class="contactMe wrapper">
@@ -213,11 +237,9 @@
         <h2>Contact Me </h2>
         <div class="inputWithIcon">
           <input type="text" placeholder="Name*" required>
-          <!-- <i class="fas fa-user"></i> -->
         </div>
         <div class="inputWithIcon">
           <input type="text" placeholder="E-mail*" required>
-          <!-- <i class="fas fa-envelope"></i> -->
         </div>
         <textarea name="message" placeholder="Message" rows="4" class="inputWithIcon"></textarea>
         <button type="submit" value="Submit">Submit</button>
@@ -228,7 +250,7 @@
   </main>
     <hr>
   <footer>
-    <div class="">
+    <div class="wrapper">
       <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
       <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
       <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
