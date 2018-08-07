@@ -239,29 +239,8 @@ header {
 }
 /*522px x 406px is the size of the screen in the computer*/
 .proj img {
-  /*width:69.9%;*/
-/*  position: absolute;
-  top:8.8%;
-  left:15%;
-  right: 15%;
-  top: 0;
-  bottom: 0; 
-  left: 0; 
-  right: 0; 
-*/
 }
 
-/*
-.proj1 {
-  background: lightblue;
-}
-.proj2 {
-  background: cadetblue;
-
-}
-.proj3 {
-  background: dodgerblue; 
-}*/
 /*proj hover styles*/
 .projPic {
   opacity: 1;
