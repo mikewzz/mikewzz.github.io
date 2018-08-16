@@ -86,7 +86,7 @@ button:hover:before,button:hover:after{
 /*header/nav styles*/
 header {
   min-height: 100vh;
-  background: #FBFBFB;
+  background:   #FFDF00;
 }
 .navbar {
   font-family: 'Roboto Condensed', sans-serif;
@@ -99,11 +99,13 @@ header {
   margin-right: 15px; 
 }
 .navbar-brand {
-  font-size: 2rem; 
+  font-size: 2rem;
+  display: inline;
 }
 .nav-item a{
   margin: 0 20px;  
-  color: black; 
+  color: black;
+  font-weight: 700;
 }
 .nav-link{
   /*-webkit-transform: translateZ(0);*/
@@ -141,7 +143,7 @@ header {
   text-align: center; 
 }
 .headerContentRight img{
-  height: calc(100vh - 80px);
+  height: calc(100vh - 75px);
   float: right;  
 }
 .myAvatar {
@@ -201,7 +203,7 @@ header {
   background-color: #0F75BC; 
 }
 .back { 
-  background-color: #ccc; 
+  background-color: #FFDF00; 
   transform: rotateY(180deg);
 }
 .devCards:hover .front {
@@ -213,7 +215,7 @@ header {
 
 /*Project styles*/
 .myProjects{
-  background: #F0A202;
+  background: #AFDFF2;
   padding: 50px 0; 
 }
 .proj {
@@ -304,6 +306,30 @@ header {
   margin: -5% auto 0 auto;
   z-index: 10;  
 }
+
+.socialIcons {
+  margin: 0 auto; 
+  display: flex; 
+  width: 50%; 
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.fa {
+  border: 2px solid; 
+  padding: 20px; 
+  margin-top: 20px; 
+  border-radius: 5px; 
+  color: #0F75BC;
+  transition: 0.5s ease;
+}
+.fa:hover {
+  text-decoration: none; 
+  border: 2px solid black;
+  background: #FFDF00;
+  color: black;
+}
+
 /*contact styles end*/
 /*footer styles*/
 footer {
