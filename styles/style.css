@@ -86,14 +86,16 @@ button:hover:before,button:hover:after{
 /*header/nav styles*/
 header {
   min-height: 100vh;
-  background:   #FFDF00;
+  background: linear-gradient(to left, #abbaab, #ffffff);
 }
 .navbar {
   font-family: 'Roboto Condensed', sans-serif;
   letter-spacing: 3px;
   text-transform: uppercase;
-  background: #AFDFF2;
+  background: linear-gradient(to right, #B2FEFA, #0ED2F7);
+  /*background: #AFDFF2;*/
 }
+
 .navbar-header img{
   width: 15%;
   margin-right: 15px; 
@@ -215,39 +217,48 @@ header {
 
 /*Project styles*/
 .myProjects{
-  background: #AFDFF2;
+  background: linear-gradient(to left, #abbaab, #ffffff);
   padding: 50px 0; 
 }
 .proj {
   width: calc(33.333333333333333333% - 20px);
-  height: 40%;  
+  height: 300px;  
   float: left; 
   margin:0 10px; 
 }
 .innerPic {
   width: 100%;
+  height: 300px;
   min-width: 215px; 
   margin: 0 auto; 
   position: relative;
-  border: 10px solid black; 
-  border-radius: 5px; 
-}
-.monitorBase {
-  width: 100%;
-  min-width: 215px; 
+  border: 5px solid black; 
+  border-radius: 5px;
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+  overflow: hidden; 
 }
 /*522px x 406px is the size of the screen in the computer*/
-.proj img {
+/*proj hover styles*/
+.projLogo {
+  max-height: 100%; 
+  max-width: 50%;
+  min-width: 150px;
+  min-height: 100px;  
+  margin: 0 auto; 
+  transition: .5s ease;
+  opacity: 1; 
 }
 
-/*proj hover styles*/
 .projPic {
-  opacity: 1;
-  display: block;
-  width: 100%;
-  height: auto;
+  opacity: 0;
+  width: auto; 
+  min-width: 600px; 
+  min-height: 100%; 
+  position: absolute;
+  top: 100px;
   transition: .5s ease;
-  backface-visibility: hidden;
 }
 
 .projInfo {
@@ -257,22 +268,25 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /*-ms-transform: translate(-50%, -50%);*/
+  -ms-transform: translate(-50%, -50%);
   text-align: center;
 }
-
-.innerPic:hover .projPic {
-  opacity: 0.3;
+.innerPic:hover .projLogo {
+  opacity: 0;
 }
-
+.innerPic:hover .projPic {
+  top: 0;  
+  opacity: 0.4;
+}
 .innerPic:hover .projInfo {
   opacity: 1;
 }
 
 .projInfo p {
-  background-color: #4CAF50;
-  color: white;
-  font-size: 16px;
+  background-color: #FFDF00;
+  color: black;
+  font-size: 1.6rem;
+  letter-spacing: 2px; 
   padding: 16px 32px;
 }
 /*proj hover stles end*/
@@ -336,9 +350,6 @@ footer {
   text-align: left;
   padding: 0 50px;    
 }
-footer p {
-  float: left; 
-}
-.footerNav {
-  float: right; 
+footer>p {
+  text-align: center;
 }
