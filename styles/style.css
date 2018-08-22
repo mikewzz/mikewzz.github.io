@@ -295,7 +295,7 @@ header {
   flex-flow: wrap row;
 }
 .subInfo {
-  opacity: 1;
+  opacity: 0;
   font-size: 3rem;
   width: 50%;
   display: flex;
