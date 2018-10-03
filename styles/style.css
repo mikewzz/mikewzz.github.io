@@ -6,6 +6,9 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 /*global styles*/
+div {
+  /*border: 2px solid red; */
+}
 html {
     font-size: 62.5%;
 }
@@ -20,7 +23,7 @@ body {
 }
 a:hover {
   text-decoration: none; 
-  color: black; 
+  color: #000; 
 }
 h1 {
   font-family: 'Alegreya', serif;
@@ -40,6 +43,8 @@ h2{
 }
 .sectionHeading {
   text-align: center; 
+  letter-spacing: 3px; 
+  font-size: 3rem; 
 }
 p {
   font-family: 'Roboto', sans-serif;
@@ -49,60 +54,46 @@ p {
 .primaryColor {
   color: #0F75BC;
 }
-button{
-  background:#0F75BC;
-  color:#fff;
-  border:none;
-  position:relative;
-  height:60px;
-  font-size:1.6em;
-  padding:0 2em;
-  cursor:pointer;
-  transition:800ms ease all;
-  /*outline:none;*/
-}
-button:hover{
-  background:#fff;
-  color:#0F75BC;
-}
-button:before,button:after{
-  content:'';
-  position:absolute;
-  top:0;
-  right:0;
-  height:2px;
-  width:0;
-  background: #0F75BC;
-  transition:400ms ease all;
-}
-button:after{
-  right:inherit;
-  top:inherit;
-  left:0;
-  bottom:0;
-}
-button:hover:before,button:hover:after{
-  width:100%;
-  transition:800ms ease all;
-}
 
 /*global styles end*/
-/*header/nav styles*/
+
+/*header&nav styles*/
 header {
   min-height: 100vh;
   background: linear-gradient(to left, #abbaab, #ffffff);
+}
+.nav {
+  flex-wrap: nowrap;
+  z-index: 30;
+}
+.navbar-expand-lg {
+  justify-content: space-between;
+}
+.navbar-collapse {
+  flex-grow: 0;
 }
 .navbar {
   font-family: 'Roboto Condensed', sans-serif;
   letter-spacing: 3px;
   text-transform: uppercase;
   background: linear-gradient(to right, #B2FEFA, #0ED2F7);
-  /*background: #AFDFF2;*/
+  height: 95px;
+  padding: 0 1rem;
+  position: fixed;
+  width:100%;
+  z-index: 40;
+  transition: all 1s;
+}
+.shrinkNav{
+  height: 65px;
+  transition: all 1s;
+  /*background: linear-gradient(to right, #B2FEFA 0, transparent 45%, transparent 55%, #0ED2F7 100%);*/
 }
 
-.navbar-header img{
-  width: 15%;
-  margin-right: 15px; 
+.navbarLogo{
+  max-height: 65px;
+  margin: 15px 15px 15px 0;
+  transition: height 1s;
 }
 .navbar-brand {
   font-size: 2rem;
@@ -114,43 +105,165 @@ header {
   font-weight: 700;
 }
 .nav-link{
-  /*-webkit-transform: translateZ(0);*/
+  -webkit-transform: translateZ(0);
   transform: translateZ(0);
-  /*-webkit-backface-visibility: hidden;*/
-  /*backface-visibility: hidden;*/
-  /*-moz-osx-font-smoothing: grayscale;*/
-  /*position: relative;*/
-  /*overflow: hidden;*/
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden;
 }
-.nav-link:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    left: 0;
-    right: 100%;
-    bottom: 0;
-    background: #0F75BC;
-    height: 4px;
-    transition: right 0.3s ease-out; 
-  }
-.nav-link:hover:before {
-    right: 0;
+.nav-link::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: #0F75BC;
+  height: 2px;
+  transition: right 0.3s ease-out; 
+}
+.nav-link:hover::before{
+  right: 0;
+}
+.hiddenAnchor{
+  position: absolute;
+  top: -50px;
 }
 
+.headerContentRight, .headerContentLeft {
+  width: 50%;
+  height: 100vh;
+}
+
+.headerContentLeft{
+  text-align: center; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  float: left; 
+  animation: slideleft 3s;
+}
+.headerContentRight{
+  float: right; 
+}
+.headerContentLeft * {
+  z-index: 20;
+}
+.headerContent {
+  position: relative;
+  overflow: hidden; 
+}
+.headerDecor {
+  position: absolute;
+  bottom: -30px;
+  left: -20px;
+  width: 250px;
+  transform: rotate(25deg);
+  z-index: 10;
+  opacity: 0.2;
+}
+
+.headerContentRight img{
+  height: 100%; 
+  float: right;
+  animation: fadein 5s;
+}
+/*animations*/
+.titlePrimary{
+  margin-bottom: 30px;
+  position: relative;
+  animation: text 3s 1;  
+}
+.titleSecondary{
+  animation: fadein 5s 1;
+}
+.titleThird{
+  animation: fadein 8s 1;
+}
+@keyframes text {
+  0% {
+    color: black;
+    margin-bottom: -60px;
+  }
+  30% {
+    letter-spacing: 4px;
+  }
+  85% {
+    letter-spacing: 2px;
+  }
+  100% {
+    letter-spacing: 0px;
+  }
+}
+@keyframes fadein {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+.selfPortrait {
+
+}
+/*Fancy Button Styles*/
+.coolButtonDiv {
+  background: #3D4C53;
+  margin : 20px auto;
+  font-size:2.5rem;
+  width : 300px;
+  height : 50px;
+  overflow: hidden;
+  text-align : center;
+  transition : .2s;
+  cursor : pointer;
+  border-radius: 3px;
+  box-shadow: 0px 1px 2px rgba(0,0,0,.2);
+  position: relative;
+}
+.coolButtonSub {
+  position : relative;
+  width : 200px;
+  height : 100px;
+  margin-top: -100px;
+  padding-top: 2px;
+  background : #0F75BC;
+  left : -250px;
+  transition : .3s;
+}
+.btnText1 {
+  color : white;
+  transition : .3s;
+  margin:auto 0;
+    line-height: 50px; 
+
+}
+.btnText2 {
+  margin-top : 63px;
+  margin-right : -130px;
+  color : #FFF;
+}
+.coolButtonDiv:hover .coolButtonSub{ /*When hovering over .coolButton change .btnHover*/
+  left: -130px;
+}
+.coolButtonDiv:hover .btnText1{ /*When hovering over .coolButton change .coolButtonTxt*/
+  margin-left : 65px;
+}
+.coolButtonDiv:active { /*Shadow effect when clicking/holding click*/
+  box-shadow: 0px 5px 6px rgba(0,0,0,0.3);
+}
+.coolButtonDiv:active{
+  transform: translateY(1px);
+}
+
+/*End of Button Styles*/
+/*End of header & nav styles*/
 /*About styles*/
 .about{
   padding: 50px 0; 
-}
-.headerContentRight, .headerContentLeft {
-  width: 50%;
-  float: left; 
-}
-.headerContentLeft{
-  text-align: center; 
-}
-.headerContentRight img{
-  height: calc(100vh - 75px);
-  float: right;  
+  position: relative;
 }
 .myAvatar {
   width: 20%; 
@@ -158,16 +271,15 @@ header {
   float: left; 
   margin-right: 20px; 
 }
-
 /*Skills styles*/
 .aboutText{
-  width: calc(60% - 20px); 
+  width: calc(50% - 20px); 
   float: left; 
   margin-right: 20px;
   padding: 0 20px; 
 }
 .aboutSkills{
-  width: calc(40% - 10px);
+  width: calc(50% - 10px);
   float: left; 
   margin-left: 10px; 
 } 
@@ -180,6 +292,7 @@ header {
 .skills, .wantedSkills {
   display: flex; 
   flex-flow: wrap row;
+  justify-content: center; 
 }
 .front i{
   font-size: 8rem;
@@ -218,11 +331,23 @@ header {
 .devCards:hover .back { 
   transform: rotateY(360deg);
 }
+/*about animation */
+.flyingFrisbee{
+  width: 5%;
+  position: absolute;
+  bottom: 0; 
+  left: 0; 
+  transform: translate(200px);
+  display: none; 
+}
 
+/*animation end*/
+/*about styles end*/
 /*Project styles*/
 .myProjects{
   background: linear-gradient(to left, #abbaab, #ffffff);
   padding: 50px 0; 
+  position: relative;
 }
 .proj {
   width: calc(33.333333333333333333% - 20px);
@@ -327,8 +452,8 @@ header {
 /*blog styles ends*/
 /*contact section styles*/
 .contactMe {
-/*  padding: 50px 0;
-*/}
+  position: relative;
+}
 #map {
   width:100%; 
   height: 350px;
@@ -340,6 +465,9 @@ header {
   display: flex; 
   flex-direction: column; 
 
+}
+.contactInfo p {
+  margin-top: 25px; 
 }
 .contactInfo img {
   width: 20%;
@@ -381,3 +509,71 @@ footer {
 footer>p {
   text-align: center;
 }
+
+/*responsive design elements*/
+@media only screen and (max-width: 1200px) {
+    .headerContentRight {
+        display: none;
+    }
+    .headerContentLeft {
+      width: 100%;
+      float:none;
+    }
+}
+
+@media only screen and (max-width: 965px) {
+  .titlePrimary>span{
+    display: block;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .devCards {
+    width: 5rem;
+    height: 5rem;
+  }
+  .front i {
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+  .back p {
+    line-height: 5rem;
+    font-size: 60%;
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+
+  .aboutResponse, .projResponsive{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+
+  }
+  .aboutText, .aboutSkills{
+    width: 100%;
+  }
+  .proj {
+    width: calc(75% - 20px);
+  }
+  .aboutText, .proj {
+    margin-bottom: 20px;
+  }
+}
+
+.navbar-toggler-icon {
+  width: 2em;
+  height: 2em;
+}
+.navbar-toggler {
+  border:1px solid black !important;
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+
+/*end of responsive design*/
