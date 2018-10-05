@@ -600,7 +600,31 @@ footer>p {
       justify-content: space-around;
     }
 }
+@media only screen and (max-width: 1080px) {
 
+  .aboutResponse, .projResponsive{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+
+  }
+  .aboutText, .aboutSkills{
+    width: 100%;
+  }
+  .proj {
+    width: calc(75% - 20px);
+  }
+  .aboutText, .proj {
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .nav{
+    background:white;
+    left: 0;
+    right: 0;  
+  }
+}
 @media only screen and (max-width: 965px) {
   .titlePrimary>span{
     display: block;
@@ -612,13 +636,6 @@ footer>p {
   }
   .fname{
     margin-bottom: 15px;
-  }
-}
-@media only screen and (max-width: 991px) {
-  .nav{
-    background:white;
-    left: 0;
-    right: 0;  
   }
 }
 @media only screen and (max-width: 700px) {
@@ -646,24 +663,7 @@ footer>p {
   }
 }
 
-@media only screen and (max-width: 1080px) {
 
-  .aboutResponse, .projResponsive{
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-
-  }
-  .aboutText, .aboutSkills{
-    width: 100%;
-  }
-  .proj {
-    width: calc(75% - 20px);
-  }
-  .aboutText, .proj {
-    margin-bottom: 20px;
-  }
-}
 
 
 
