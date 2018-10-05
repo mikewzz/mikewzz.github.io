@@ -198,7 +198,7 @@ header {
     margin-bottom: -60px;
   }
   30% {
-    letter-spacing: 3px;
+    letter-spacing: 4px;
   }
   85% {
     letter-spacing: 2px;
@@ -382,7 +382,7 @@ header {
 .projLogo {
   max-height: 100%; 
   max-width: 50%;
-  min-width: 150px;
+  min-width: 175px;
   min-height: 100px;  
   transition: .5s ease;
   opacity: 1; 
