@@ -6,9 +6,6 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 /*global styles*/
-div {
-  /*border: 2px solid red; */
-}
 html {
     font-size: 62.5%;
 }
@@ -46,6 +43,7 @@ h2{
   letter-spacing: 3px; 
   font-size: 3rem; 
 }
+
 p {
   font-family: 'Roboto', sans-serif;
   line-height: 25px;
@@ -92,8 +90,8 @@ header {
 
 .navbarLogo{
   max-height: 65px;
-  margin: 15px 15px 15px 0;
-  transition: height 1s;
+  margin: 15px 0 15px 0;
+  transition: all 1s;
 }
 .navbar-brand {
   font-size: 2rem;
@@ -130,6 +128,18 @@ header {
 .hiddenAnchor{
   position: absolute;
   top: -50px;
+}
+
+.navbar-toggler-icon {
+  width: 2em;
+  height: 2em;
+}
+.navbar-toggler {
+  border:1px solid black !important;
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translate(-50%, -50%);
 }
 
 .headerContentRight, .headerContentLeft {
@@ -460,46 +470,106 @@ header {
 }
 .contactInfo {
   width: 100%; 
-  text-align: center; 
+  align-items: center;  
   font-size: 3rem;
   display: flex; 
   flex-direction: column; 
 
 }
+.contactContent {
+  display: flex; 
+  flex-direction: row;
+  width: 100%;
+
+}
 .contactInfo p {
   margin-top: 25px; 
 }
-.contactInfo img {
+.contactImg{
   width: 20%;
   min-width: 200px; 
   border-radius: 50%; 
-  margin: -5% auto 0 auto;
-  z-index: 10;  
+  margin: -7% auto 15px auto;
+  z-index: 20;  
+}
+.contactForm, .socialMedia {
+  float: left; 
+}
+.contactForm {
+  width: 65%;
+}
+.contactForm p {
+  font-size: 2rem;
+  color: #0F75BC;
+}
+.formFields>*{
+  margin-bottom: 55px;
+  font-size: 2rem;
+  padding-left: 10px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, .1);
+
+}
+.fname, .email {
+  width: calc(50% - 50px);
+  display: block;
+  float: left;
+  height: 50px;
+}
+.fname{
+  margin-right: 100px;
+}
+.messages{
+  width: 100%;
+  margin-bottom: 15px;
 }
 
-.socialIcons {
-  margin: 0 auto; 
-  display: flex; 
-  width: 50%; 
-  flex-direction: row;
-  justify-content: space-around;
+.socialMedia {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  padding: 20px;
+}
+.socialMedia h2{
+  display: inline-block;
+}
+.socialMain {
+  white-space: nowrap;
+}
+.phone, .emailaddress {
+  display: block;
+}
+.phone h3, .emailaddress h3{
+  display: inline-block; 
+  margin: 0;
+  font-size: 2rem;
+  line-height: 3rem;
 }
 
-.fa {
+.fa, .mySubmit{
   border: 2px solid; 
-  padding: 20px; 
-  margin-top: 20px; 
+  padding:15px; 
+  margin-bottom: 20px; 
   border-radius: 5px; 
   color: #0F75BC;
   transition: 0.5s ease;
+  white-space: nowrap;
 }
-.fa:hover {
+
+.fa:hover, .mySubmit:hover{
   text-decoration: none; 
   border: 2px solid black;
   background: #FFDF00;
   color: black;
 }
-
+/*submit button css*/
+.mySubmit{
+  padding: 10px 20px;
+  background: white;
+}
+/*end submit css*/
 /*contact styles end*/
 /*footer styles*/
 footer {
@@ -519,11 +589,28 @@ footer>p {
       width: 100%;
       float:none;
     }
+    .contactContent {
+      flex-direction: column;
+    }
+    .contactContent>*{
+      width: 100%;
+    }
+    .socialMedia {
+      flex-direction: row;
+      justify-content: space-around;
+    }
 }
 
 @media only screen and (max-width: 965px) {
   .titlePrimary>span{
     display: block;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .nav{
+    background:white;
+    left: 0;
+    right: 0;  
   }
 }
 @media only screen and (max-width: 500px) {
@@ -560,20 +647,11 @@ footer>p {
   }
 }
 
-.navbar-toggler-icon {
-  width: 2em;
-  height: 2em;
-}
-.navbar-toggler {
-  border:1px solid black !important;
-  position: absolute;
-  top: 50%;
-  right: 5px;
-  transform: translate(-50%, -50%);
-}
+
 
 
 
 
 
 /*end of responsive design*/
+

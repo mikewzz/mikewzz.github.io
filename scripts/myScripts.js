@@ -15,7 +15,7 @@ $(document).ready(function() {
         // Using jQuery's animate() method to add smooth page scroll
         // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
         $('html, body').animate({
-          scrollTop: $(hash).offset().top - 50
+          scrollTop: $(hash).offset().top
         }, 400, function(){
 
         // Add hash (#) to URL when done scrolling (default click behavior)
@@ -65,9 +65,13 @@ $(document).ready(function() {
                     if (scroll >= 200) {
                         header.addClass("shrinkNav");
                         $('.navbarLogo').height(50);
+                        $('.navbarLogo').css("margin-top","7.5px");
+                        $('.navbarLogo').css("margin-bottom","7.5px");
                     } else {
                         header.removeClass("shrinkNav");
                         $('.navbarLogo').height(65);
+                        $('.navbarLogo').css("margin-top","15px");
+                        $('.navbarLogo').css("margin-bottom","15px");
                     }
                 });
             });

@@ -82,8 +82,8 @@
     </section>
   </header>
     <!-- About Section -->
-      <section class="about" id="about">
-        
+      <section class="about">
+        <span class="hiddenAnchor" id="about"></span>
         <div class="wrapper clearfix aboutResponse">
           <div class="aboutText">
             <h2 class="sectionHeading">About</h2>
@@ -226,7 +226,7 @@
   <main>
     <!--Project Section-->
     <section class="myProjects">
-      <a class="hiddenAnchor" id="projects"></a>
+      <span class="hiddenAnchor" id="projects"></span>
       <h2 class="sectionHeading">Projects</h2>
       <div class="clearfix projResponsive">
         <div class="proj">
@@ -278,7 +278,7 @@
     </section>
     <!--Project Section ends-->
     <!-- <section class="myBlog">
-      <a class="hiddenAnchor" id="blog"></a>
+      <span class="hiddenAnchor" id="blog"></span>
       <div class="wrapper">
         <h2 class="sectionHeading">My Blog</h2>
         <h3>Behind the scenes of my life!</h3>
@@ -287,18 +287,39 @@
     </section> -->
     <!--Contact Section-->
     <section class="contactMe">
-      <a class="hiddenAnchor" id="contact"></a>
-      <div id="map"></div>
-     
-      <div class="wrapper clearfix">
+      <span class="hiddenAnchor" id="contact"></span>
+      <div id="map"></div>     
+      <div class=" wrapper clearfix">
         <div class="contactInfo">
-          <img src="images/suitPicture.jpg" alt="">
-          <p>Here are some places to get in touch with me!</p>
-          <div class="socialIcons">
-            <a href="https://www.linkedin.com/in/michael-wang-wzz/" class="fa fa-linkedin"></a>
-            <a href="https://github.com/mikewzz" class="fa fa-github"></a>
-            <a href="https://twitter.com/3mikee__" class="fa fa-twitter"></a>
-            <a href="mailto:zwang368@alumni.uwo.ca?Subject=Hey%20Mike" class="fa fa-envelope"></a>
+          <img src="images/suitPicture.jpg" alt="" class="contactImg">
+
+
+          <div class="contactContent">
+            <div class="contactForm">
+              <h2>Have a question or want to work together?</h2>
+              <p>Talk to me about new and exciting projects or just say hello. I am open to working remotely and I'm always looking for new challenges!</p>
+              <form action="action_page.php" class="formFields">
+                <input type="text" id="fname" placeholder="Name" class="fname" required>        
+                <input type="email" id="email" placeholder="Email" class="email" required>            
+                <textarea id="subject" name="subject" placeholder="Lets build something awesome!" style="height:150px" class="messages" required></textarea>
+                <input type="submit" value="Submit" class="mySubmit">
+              </form>
+            </div>
+            <div class="socialMedia">
+              <div class="socialMain">
+                <h2>Find me here...</h2>
+                <span class="phone"><a href="tel:647-783-3366" class="fa fa-phone"></a>
+                <h3>647-783-3366</h3></span>
+                <span class=emailaddress><a href="mailto:zwang368@alumni.uwo.ca?Subject=Hey%20Mike" class="fa fa-envelope"></a>
+                <h3>zwang368@alumni.uwo.ca</h3></span>
+              </div>
+              <div class="socialOther">
+                <h2>& Elsewhere</h2><br>
+                <a href="https://www.linkedin.com/in/michael-wang-wzz/" class="fa fa-linkedin"></a>
+                <a href="https://github.com/mikewzz" class="fa fa-github"></a>
+                <a href="https://twitter.com/3mikee__" class="fa fa-twitter"></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -309,13 +330,6 @@
   <footer class="clearfix">
     <p>Created by <a href="#">Michael Wang</a> 2018 &#169 All Rights Reserved | Graphics were obtained from these <a href="#">designers</a></p>
   </footer>
- <!--  <script>  
-    $(document).ready(function(){
-        $("#projTitle").hover(function(){
-            $("subInfo").show();
-        });
-    });
-  </script> -->
 </body>
 </html>
 
