@@ -512,13 +512,13 @@ header {
 
 }
 .fname, .email {
-  width: calc(50% - 50px);
+  width: calc(50% - 40px);
   display: block;
   float: left;
   height: 50px;
 }
 .fname{
-  margin-right: 100px;
+  margin-right: 80px;
 }
 .messages{
   width: 100%;
@@ -605,12 +605,30 @@ footer>p {
   .titlePrimary>span{
     display: block;
   }
+  .fname, .email {
+    width: 100%;
+    float: none;
+    margin-bottom: 15px;
+  }
+  .fname{
+    margin-bottom: 15px;
+  }
 }
 @media only screen and (max-width: 991px) {
   .nav{
     background:white;
     left: 0;
     right: 0;  
+  }
+}
+@media only screen and (max-width: 700px) {
+  .socialMedia {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  .phone h3, .emailaddress h3 {
+    font-size: 1.5rem;
   }
 }
 @media only screen and (max-width: 500px) {
