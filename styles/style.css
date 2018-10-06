@@ -255,6 +255,7 @@ header {
   transition : .3s;
 }
 .btnText1 {
+  font-family: 'Alegreya', serif;
   color : white;
   transition : .3s;
   margin:auto 0;
@@ -262,6 +263,7 @@ header {
 
 }
 .btnText2 {
+  font-family: 'Alegreya', serif;
   margin-top : 63px;
   margin-right : -130px;
   color : #FFF;
