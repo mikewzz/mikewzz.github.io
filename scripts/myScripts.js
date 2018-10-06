@@ -1,6 +1,7 @@
 
 $(document).ready(function() {
     //this closes the navbar when anchor link is clicked in responsive burger menu mode
+
     $('.navbar a').on('click', function(){
         $('.navbar-collapse').collapse('hide');
     });

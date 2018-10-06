@@ -81,6 +81,7 @@ header {
   width:100%;
   z-index: 40;
   transition: all 1s;
+  /*border-bottom: 2px solid blue;*/
 }
 .shrinkNav{
   height: 65px;
@@ -125,6 +126,12 @@ header {
 .nav-link:hover::before{
   right: 0;
 }
+.nav-link:hover {
+    color: rgba(0,0,0,1) !important;
+}
+/*.navActive {
+  color: rgba(0,0,0,0.7) !important;
+}*/
 .hiddenAnchor{
   position: absolute;
   top: -50px;
