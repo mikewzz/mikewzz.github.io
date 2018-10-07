@@ -86,7 +86,6 @@ header {
 .shrinkNav{
   height: 65px;
   transition: all 1s;
-  /*background: linear-gradient(to right, #B2FEFA 0, transparent 45%, transparent 55%, #0ED2F7 100%);*/
 }
 
 .navbarLogo{
@@ -127,15 +126,14 @@ header {
   right: 0;
 }
 .nav-link:hover {
-    color: rgba(0,0,0,1) !important;
+  color: rgba(0,0,0,1) !important;
 }
-/*.navActive {
-  color: rgba(0,0,0,0.7) !important;
-}*/
-.hiddenAnchor{
+
+
+/*.hiddenAnchor{
   position: absolute;
   top: -50px;
-}
+}*/
 
 .navbar-toggler-icon {
   width: 2em;
