@@ -5,38 +5,8 @@ $(document).ready(function() {
     $('.navbar a').on('click', function(){
         $('.navbar-collapse').collapse('hide');
     });
-    // Add smooth scrolling on all links inside the navbar & coolbutton
-    // $("#myNav a, .coolButtonDiv a").on('click', function(event) {
-
-    //   // Make sure this.hash has a value before overriding default behavior
-    //   if (this.hash !== "") {
-
-    //     // Prevent default anchor click behavior
-    //     event.preventDefault();
-
-    //     // Store hash
-    //     var hash = this.hash;
-
-    //     // Using jQuery's animate() method to add smooth page scroll
-    //     // The optional number (300) specifies the number of milliseconds it takes to scroll to the specified area
-    //     $('html, body').animate({
-    //       scrollTop: $(hash).offset().top
-    //     }, 300, function(){
-
-    //     // Add hash (#) to URL when done scrolling (default click behavior)
-    //       window.location.hash = '';
-    //     });
-
-    //   } // End if
-
-    // });
-    // $('#myNav a[href^="#"], .coolButtonDiv a').click(function () {
-    //     $('html, body').animate({
-    //         scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top-100
-    //     }, 300);
-
-    //     return false;
-    // });
+    
+    //smooth scroll @ 300 ms 
     $('#myNav a[href^="#"], .coolButtonDiv a').click(function () {
         $('html, body').animate({
             scrollTop: $($.attr(this, 'href')).offset().top-50
@@ -100,4 +70,15 @@ $(document).ready(function() {
     $(window).on('hashchange', function(e){
         history.replaceState ("", document.title, e.originalEvent.oldURL);
     });
+
+
+//header color generator!!
+    function getRandomColor(){
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
 });

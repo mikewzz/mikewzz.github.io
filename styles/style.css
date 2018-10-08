@@ -40,17 +40,16 @@ h2{
 }
 .sectionHeading {
   text-align: center; 
-  letter-spacing: 3px; 
-  font-size: 3rem; 
+  letter-spacing: 5px; 
+  font-size: 3.2rem; 
 }
-
 p {
   font-family: 'Roboto', sans-serif;
   line-height: 25px;
   margin: 0 0 23px 0;
 }
 .primaryColor {
-  color: #0F75BC;
+  color: midnightblue;
 }
 
 /*global styles end*/
@@ -58,7 +57,10 @@ p {
 /*header&nav styles*/
 header {
   min-height: 100vh;
-  background: linear-gradient(to left, #abbaab, #ffffff);
+  background: white;
+}
+.headerName {
+  
 }
 .nav {
   flex-wrap: nowrap;
@@ -74,14 +76,13 @@ header {
   font-family: 'Roboto Condensed', sans-serif;
   letter-spacing: 3px;
   text-transform: uppercase;
-  background: linear-gradient(to right, #B2FEFA, #0ED2F7);
+  background: white;
   height: 95px;
   padding: 0 1rem;
   position: fixed;
-  width:100%;
-  z-index: 40;
+  width:100%;  z-index: 40;
   transition: all 1s;
-  /*border-bottom: 2px solid blue;*/
+  border-bottom: 2px solid orange;
 }
 .shrinkNav{
   height: 65px;
@@ -89,7 +90,7 @@ header {
 }
 
 .navbarLogo{
-  max-height: 65px;
+  max-height: 50px;
   margin: 15px 0 15px 0;
   transition: all 1s;
 }
@@ -119,22 +120,20 @@ header {
   right: 100%;
   bottom: 0;
   background: #0F75BC;
-  height: 2px;
+  height: 4px;
   transition: right 0.3s ease-out; 
 }
 .nav-link:hover::before{
   right: 0;
 }
-.nav-link:hover {
+
+/*.nav .nav-item .nav-link:hover {
   color: rgba(0,0,0,1) !important;
 }
-
-
-/*.hiddenAnchor{
-  position: absolute;
-  top: -50px;
-}*/
-
+.nav-item .nav-link .active {
+  color: rgba(0,0,0,1) !important;
+}
+*/
 .navbar-toggler-icon {
   width: 2em;
   height: 2em;
@@ -186,11 +185,12 @@ header {
   float: right;
   animation: fadein 5s;
 }
-/*animations*/
+/*hero animations*/
 .titlePrimary{
   margin-bottom: 30px;
   position: relative;
   animation: text 3s 1;  
+  color: rgba(0,0,0,0.3);
 }
 .titleSecondary{
   animation: fadein 5s 1;
@@ -224,12 +224,10 @@ header {
       opacity: 1;
     }
 }
-.selfPortrait {
 
-}
 /*Fancy Button Styles*/
 .coolButtonDiv {
-  background: #3D4C53;
+  background: midnightblue;
   margin : 20px auto;
   font-size:2.5rem;
   width : 300px;
@@ -248,7 +246,7 @@ header {
   height : 100px;
   margin-top: -100px;
   padding-top: 2px;
-  background : #0F75BC;
+  background : orange;
   left : -250px;
   transition : .3s;
 }
@@ -285,6 +283,7 @@ header {
 .about{
   padding: 50px 0; 
   position: relative;
+  background: papayawhip;
 }
 .myAvatar {
   width: 25%; 
@@ -343,7 +342,8 @@ header {
   background-color: #0F75BC; 
 }
 .back { 
-  background-color: #FFDF00; 
+  background-color: midnightblue;
+  color:white; 
   transform: rotateY(180deg);
 }
 .devCards:hover .front {
@@ -366,7 +366,8 @@ header {
 /*about styles end*/
 /*Project styles*/
 .myProjects{
-  background: linear-gradient(to left, #abbaab, #ffffff);
+  /*background: linear-gradient(to left, #abbaab, #ffffff);*/
+  background: white;
   padding: 50px 0; 
   position: relative;
 }
@@ -410,7 +411,7 @@ header {
 }
 
 .projLink{
-  transition: 0.5s ease;
+  transition: all 0.5s ease;
   opacity: 0;
   position: absolute;
   top: 50%;
@@ -418,8 +419,8 @@ header {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
-  background-color: #FFDF00;
-  color: black;
+  background-color: midnightblue;
+  color: white;
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 2px; 
@@ -428,7 +429,10 @@ header {
   z-index: 10;
   /*overflow: visible;*/
 }
-
+.projLink:hover {
+  border-radius: 50px;
+  color: white;
+}
 .projInfo {
   transition: 0.5s ease;
   width: 100%;
@@ -511,7 +515,7 @@ header {
 }
 .contactForm p {
   font-size: 2rem;
-  color: #0F75BC;
+  color: midnightblue;
 }
 .formFields>*{
   margin-bottom: 55px;
@@ -564,7 +568,7 @@ header {
   padding:15px; 
   margin-bottom: 20px; 
   border-radius: 5px; 
-  color: #0F75BC;
+  color: midnightblue;
   transition: 0.5s ease;
   white-space: nowrap;
   min-width: 64px;
