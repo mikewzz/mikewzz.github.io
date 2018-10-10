@@ -59,9 +59,6 @@ header {
   min-height: 100vh;
   background: white;
 }
-.headerName {
-  
-}
 .nav {
   flex-wrap: nowrap;
   z-index: 30;
@@ -189,7 +186,8 @@ header {
 .titlePrimary{
   margin-bottom: 30px;
   position: relative;
-  animation: text 3s 1;  
+  animation: text 3s 1;
+  white-space: pre;
   color: rgba(0,0,0,0.3);
 }
 .titleSecondary{
@@ -207,7 +205,7 @@ header {
     margin-bottom: -60px;
   }
   30% {
-    letter-spacing: 4px;
+    letter-spacing: 6px;
   }
   85% {
     letter-spacing: 2px;
@@ -685,6 +683,9 @@ footer>p {
   }
 }
 @media only screen and (max-width: 500px) {
+  .titlePrimary {
+    white-space: normal;
+  }
   .devCards {
     width: 5rem;
     height: 5rem;
