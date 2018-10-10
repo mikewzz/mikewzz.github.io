@@ -578,7 +578,7 @@ header {
 .fa:hover, .mySubmit:hover{
   text-decoration: none; 
   border: 2px solid black;
-  background: #FFDF00;
+  background: orange;
   color: black;
 }
 /*submit button css*/
