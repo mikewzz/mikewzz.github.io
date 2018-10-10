@@ -686,6 +686,9 @@ footer>p {
   .titlePrimary {
     white-space: normal;
   }
+  .titlePrimary br {
+    display: none;
+  }
   .devCards {
     width: 5rem;
     height: 5rem;
