@@ -52,6 +52,12 @@ p {
   color: midnightblue;
 }
 
+.revealOnScroll {
+  opacity: 0;
+}
+.animated {
+  opacity: 1 !important;
+}
 /*global styles end*/
 
 /*header&nav styles*/
@@ -123,14 +129,6 @@ header {
 .nav-link:hover::before{
   right: 0;
 }
-
-/*.nav .nav-item .nav-link:hover {
-  color: rgba(0,0,0,1) !important;
-}
-.nav-item .nav-link .active {
-  color: rgba(0,0,0,1) !important;
-}
-*/
 .navbar-toggler-icon {
   width: 2em;
   height: 2em;
@@ -180,7 +178,7 @@ header {
 .headerContentRight img{
   height: 100%; 
   float: right;
-  animation: fadein 5s;
+  animation: fadeinleft 3s;
 }
 /*hero animations*/
 .titlePrimary{
@@ -192,12 +190,20 @@ header {
 }
 .titleSecondary{
   animation: fadein 5s 1;
-  
 }
 .titleThird{
   animation: fadein 8s 1;
   font-family: 'Roboto Condensed', sans-serif;
   letter-spacing: 2px;
+}
+@keyframes fadeinleft {
+  0% {
+    opacity: 0;
+    margin-right: -100px;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 @keyframes text {
   0% {
@@ -628,7 +634,7 @@ footer>p {
     }
     .socialMedia {
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: space-between;
     }
 }
 @media only screen and (max-width: 1080px) {
@@ -660,6 +666,12 @@ footer>p {
   .titlePrimary>span{
     display: block;
   }
+  .titlePrimary {
+    white-space: normal;
+  }
+  .titlePrimary br {
+    display: none;
+  }
   .fname, .email {
     width: 100%;
     float: none;
@@ -675,7 +687,7 @@ footer>p {
 @media only screen and (max-width: 700px) {
   .socialMedia {
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-start;
   }
   .phone h3, .emailaddress h3 {
@@ -683,12 +695,6 @@ footer>p {
   }
 }
 @media only screen and (max-width: 500px) {
-  .titlePrimary {
-    white-space: normal;
-  }
-  .titlePrimary br {
-    display: none;
-  }
   .devCards {
     width: 5rem;
     height: 5rem;

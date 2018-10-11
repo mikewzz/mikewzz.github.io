@@ -1,5 +1,6 @@
 
 $(document).ready(function() {
+    //this acts as the preloader for images on the site that are slightly larger in file size and will hopefully improve performance problems
     function preloader() {
         if (document.getElementById) {
             document.getElementById("preload-01").style.background = "url(./images/HeaderPhotoNYRedone_40.png) no-repeat -9999px -9999px";
@@ -22,7 +23,53 @@ $(document).ready(function() {
     }
     addLoadEvent(preloader);
 
-    
+    //the functions here will largely be responsible for animations and transitions throughout the site
+    $(function() {
+
+      var $window           = $(window),
+          win_height_padded = $window.height(),
+          isTouch           = Modernizr.touch;
+
+      if (isTouch) { $('.revealOnScroll').addClass('animated'); }
+
+      $window.on('scroll', revealOnScroll);
+
+      function revealOnScroll() {
+        var scrolled = $window.scrollTop(),
+            win_height_padded = $window.height();
+
+        // Showed...
+        $(".revealOnScroll:not(.animated)").each(function () {
+          var $this     = $(this),
+              offsetTop = $this.offset().top;
+
+          if (scrolled + win_height_padded > offsetTop) {
+            if ($this.data('timeout')) {
+              window.setTimeout(function(){
+                $this.addClass('animated ' + $this.data('animation'));
+              }, parseInt($this.data('timeout'),10));
+            } else {
+              $this.addClass('animated ' + $this.data('animation'));
+            }
+          }
+        });
+        // Hidden...
+       $(".revealOnScroll.animated").each(function (index) {
+          var $this     = $(this),
+              offsetTop = $this.offset().top;
+          if (scrolled == 0) {
+            $(this).removeClass('animated fadeInUp bounceInLeft fadeInRight fadeInDown')
+          }
+          // if (scrolled > $(this).height() + offsetTop) {
+          //   $(this).removeClass('animated fadeInUp bounceInLeft lightSpeedIn');
+          // } 
+        });
+
+        }
+
+        // revealOnScroll();
+    });
+
     //this closes the navbar when anchor link is clicked in responsive burger menu mode
 
     $('.navbar a').on('click', function(){
