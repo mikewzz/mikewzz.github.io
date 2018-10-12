@@ -42,9 +42,8 @@ h2{
   text-align: center; 
   letter-spacing: 5px; 
   font-size: 4.8rem; 
-/*  text-decoration: underline;
-  text-decoration-color: orange;*/
-  border-bottom: 5px solid orange;
+  text-decoration: underline;
+  text-decoration-color: #ffc966;
 }
 p {
   font-family: 'Roboto', sans-serif;
