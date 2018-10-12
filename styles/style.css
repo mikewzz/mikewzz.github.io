@@ -288,7 +288,7 @@ header {
   padding: 50px 0; 
   position: relative;
   background: papayawhip;
-  height: calc(100vh - 65px);
+  min-height: calc(100vh - 65px);
 }
 .myAvatar {
   width: 25%; 
@@ -620,20 +620,20 @@ footer>p {
     width: 75%;
   }
   .skillText {
-    margin: 0;
-    font-size: 2rem;
+    margin: 15px;
+    font-size: 2.4rem;
   }
   .devCards {
-    width: 9rem;
-    height: 9rem;
+    width: 9.3rem;
+    height: 9.3rem;
   }
   .front i {
     font-size: 7.5rem;
-    line-height: 9rem;
+    line-height: 9.3rem;
   }
   .back p {
-    line-height: 8rem;
-    font-size: 80%;
+    line-height: 9.3rem;
+    font-size: 85%;
   }
 }
 
