@@ -41,7 +41,7 @@ h2{
 .sectionHeading {
   text-align: center; 
   letter-spacing: 5px; 
-  font-size: 3.2rem; 
+  font-size: 3.6rem; 
 }
 p {
   font-family: 'Roboto', sans-serif;
@@ -288,15 +288,17 @@ header {
   padding: 50px 0; 
   position: relative;
   background: papayawhip;
+  height: calc(100vh - 65px);
 }
 .myAvatar {
   width: 25%; 
+  max-width: 200px;
   border-radius: 50%; 
   float: left; 
   margin-right: 20px; 
 }
 /*Skills styles*/
-.aboutText{
+/*.aboutText{
   width: calc(50% - 20px); 
   float: left; 
   margin-right: 20px;
@@ -306,10 +308,21 @@ header {
   width: calc(50% - 10px);
   float: left; 
   margin-left: 10px; 
-} 
+} */
+.aboutText, .aboutSkills {
+  width: 100%;
+  float: left; 
+}
+.aboutText p {
+  font-family: 'Roboto Condensed', sans-serif;
+  letter-spacing: 2px;
+  font-size:2rem;
+}
 .skillText{
+  text-align: center;
+  font-size: 2.6rem;
   font-weight: 700; 
-  margin: 0; 
+  margin: 30px 0; 
   font-family: 'Roboto Condensed', sans-serif;
   letter-spacing: 3px; 
 }
@@ -329,7 +342,7 @@ header {
 }
 .devCards {
   position: relative;
-  width: 10rem;
+  width: 12rem;
   height: 10rem;
   perspective: 30rem;
   margin: 5px; 
@@ -606,6 +619,22 @@ footer>p {
   .titleThird {
     width: 75%;
   }
+  .skillText {
+    margin: 0;
+    font-size: 2rem;
+  }
+  .devCards {
+    width: 9rem;
+    height: 9rem;
+  }
+  .front i {
+    font-size: 7.5rem;
+    line-height: 9rem;
+  }
+  .back p {
+    line-height: 8rem;
+    font-size: 80%;
+  }
 }
 
 @media only screen and (max-width: 1500px) {
@@ -617,6 +646,7 @@ footer>p {
   .headerContentLeft {
     width: 30%;
   }
+
 }
 @media only screen and (max-width: 1200px) {
     .headerContentRight {
@@ -636,6 +666,7 @@ footer>p {
       flex-direction: row;
       justify-content: space-between;
     }
+
 }
 @media only screen and (max-width: 1080px) {
 
@@ -684,6 +715,7 @@ footer>p {
     margin: -10% auto 15px auto;
   }
 }
+
 @media only screen and (max-width: 700px) {
   .socialMedia {
     flex-direction: column;
