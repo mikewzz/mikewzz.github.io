@@ -42,8 +42,10 @@ h2{
   text-align: center; 
   letter-spacing: 5px; 
   font-size: 4.8rem; 
-  text-decoration: underline;
-  text-decoration-color: #ffc966;
+  padding-bottom: 15px;
+  border-bottom: 5px solid #ffc966;
+  margin-bottom: 20px;
+  display: inline-block;
 }
 p {
   font-family: 'Roboto', sans-serif;
@@ -298,6 +300,7 @@ header {
   border-radius: 50%; 
   float: left; 
   margin-right: 20px; 
+  display: inline;
 }
 /*Skills styles*/
 /*.aboutText{
@@ -314,6 +317,11 @@ header {
 .aboutText, .aboutSkills {
   width: 100%;
   float: left; 
+}
+.aboutText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .aboutText p {
   font-family: 'Roboto Condensed', sans-serif;
@@ -391,7 +399,11 @@ header {
   background: white;
   padding: 50px 0; 
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 .proj {
   width: calc(33.333333333333333333% - 20px);
   float: left; 
