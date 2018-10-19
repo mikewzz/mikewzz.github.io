@@ -169,16 +169,6 @@ header {
   position: relative;
   overflow: hidden; 
 }
-.headerDecor {
-  position: absolute;
-  bottom: -30px;
-  left: -20px;
-  width: 250px;
-  transform: rotate(25deg);
-  z-index: 10;
-  opacity: 0.2;
-}
-
 .headerContentRight img{
   height: 100%; 
   float: right;
@@ -296,6 +286,7 @@ header {
 }
 .myAvatar {
   width: 25%; 
+  min-width: 100px;
   max-width: 200px;
   border-radius: 50%; 
   float: left; 
@@ -303,17 +294,6 @@ header {
   display: inline;
 }
 /*Skills styles*/
-/*.aboutText{
-  width: calc(50% - 20px); 
-  float: left; 
-  margin-right: 20px;
-  padding: 0 20px; 
-}
-.aboutSkills{
-  width: calc(50% - 10px);
-  float: left; 
-  margin-left: 10px; 
-} */
 .aboutText, .aboutSkills {
   width: 100%;
   float: left; 
@@ -382,21 +362,11 @@ header {
   transform: rotateY(360deg);
 }
 /*about animation */
-.flyingFrisbee{
-  width: 5%;
-  position: absolute;
-  bottom: 0; 
-  left: 0; 
-  transform: translate(200px);
-  display: none; 
-}
 
 /*animation end*/
 /*about styles end*/
 /*Project styles*/
 .myProjects{
-  /*background: linear-gradient(to left, #abbaab, #ffffff);*/
-  background: white;
   padding: 50px 0; 
   position: relative;
   display: flex;
@@ -405,9 +375,9 @@ header {
 }
 
 .proj {
-  width: calc(33.333333333333333333% - 20px);
+  width: calc(50% - 20px);
   float: left; 
-  margin:0 10px; 
+  margin:10px; 
   border: 5px solid black; 
   box-shadow: 5px 5px 10px #888888;
   border-radius: 5px;
@@ -422,7 +392,6 @@ header {
   justify-content: center;
   align-items: center; 
 }
-/*522px x 406px is the size of the screen in the computer*/
 /*proj hover styles*/
 .projLogo {
   max-height: 100%; 
@@ -439,7 +408,6 @@ header {
   min-width: 600px; 
   min-height: 100%; 
   position: absolute;
-  /*top: 100px;*/
   transition: .5s ease;
 }
 
@@ -460,7 +428,6 @@ header {
   padding: 16px 32px;
   display: inline-block;
   z-index: 10;
-  /*overflow: visible;*/
 }
 .projLink:hover {
   border-radius: 50px;
@@ -502,11 +469,7 @@ header {
 }
 /*proj hover stles end*/
 /*blog styles*/
-.myBlog{
-  height: 300px; 
-  background: #EBEBEB; 
-  padding: 50px 0; 
-}
+
 /*blog styles ends*/
 /*contact section styles*/
 .contactMe {

@@ -79,7 +79,7 @@ $(document).ready(function() {
     //smooth scroll @ 300 ms 
     $('#myNav a[href^="#"], .coolButtonDiv a').click(function () {
         $('html, body').animate({
-            scrollTop: $($.attr(this, 'href')).offset().top-50
+            scrollTop: $($.attr(this, 'href')).offset().top-40
         }, 300);
 
         return false;
