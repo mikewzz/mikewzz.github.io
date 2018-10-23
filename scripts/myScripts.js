@@ -24,6 +24,11 @@ $(document).ready(function() {
     addLoadEvent(preloader);
 
     //the functions here will largely be responsible for animations and transitions throughout the site
+
+    function construction() {
+        alert("Under Construction");
+    }
+
     $(function() {
 
       var $window           = $(window),
