@@ -1,4 +1,4 @@
-
+ 
 $(document).ready(function() {
     //this acts as the preloader for images on the site that are slightly larger in file size and will hopefully improve performance problems
     function preloader() {
@@ -148,12 +148,12 @@ $(document).ready(function() {
 
 
 //header color generator!!
-    function getRandomColor(){
-        var letters = '0123456789ABCDEF';
-        var color = '#';
-        for (var i = 0; i < 6; i++) {
-          color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;
-    }
+    // function getRandomColor(){
+    //     var letters = '0123456789ABCDEF';
+    //     var color = '#';
+    //     for (var i = 0; i < 6; i++) {
+    //       color += letters[Math.floor(Math.random() * 16)];
+    //     }
+    //     return color;
+    // }
 });
