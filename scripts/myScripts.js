@@ -3,7 +3,7 @@ $(document).ready(function() {
     //this acts as the preloader for images on the site that are slightly larger in file size and will hopefully improve performance problems
     function preloader() {
         if (document.getElementById) {
-            document.getElementById("preload-01").style.background = "url(./images/HeaderPhotoNYRedone_40.png) no-repeat -9999px -9999px";
+            document.getElementById("preload-01").style.background = "url(./images/HeaderPhotoNYRedone_41.webp) no-repeat -9999px -9999px";
             document.getElementById("preload-02").style.background = "url(./images/website1.png) no-repeat -9999px -9999px";
             document.getElementById("preload-03").style.background = "url(./images/website3.png) no-repeat -9999px -9999px";
         }
