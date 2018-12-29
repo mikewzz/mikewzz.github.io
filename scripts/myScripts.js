@@ -4,8 +4,8 @@ $(document).ready(function() {
     function preloader() {
         if (document.getElementById) {
             document.getElementById("preload-01").style.background = "url(./images/HeaderPhotoNYRedone_41.webp) no-repeat -9999px -9999px";
-            document.getElementById("preload-02").style.background = "url(./images/website1.png) no-repeat -9999px -9999px";
-            document.getElementById("preload-03").style.background = "url(./images/website3.png) no-repeat -9999px -9999px";
+            document.getElementById("preload-02").style.background = "url(./images/website5.webp) no-repeat -9999px -9999px";
+            document.getElementById("preload-03").style.background = "url(./images/website3.webp) no-repeat -9999px -9999px";
         }
     }
     function addLoadEvent(func) {
